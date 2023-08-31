@@ -54,14 +54,20 @@ while I < len(URLS):
     os.remove("downloaded_lists/blocklist"+str(I)+".txt")
     I = I + 1
 
-# Clean aio.txt file
+# Cleans aio_blocklist.txt file
 print("Cleaning aio_blocklist.txt, please wait..")
+# Open the file
 UNIQUELINES = set(open('aio_blocklist.txt', encoding='utf-8').readlines())
+# Sort all lines in the set
+UNIQUELINES = sorted(UNIQUELINES)
+# Removes duplicates from from text file
 CLEANEDOUTPUT = open('aio_blocklist.txt', 'w', encoding='utf-8').writelines(UNIQUELINES)
+# Open the file for removing comments
 AIOFILE = open('aio_blocklist.txt', encoding='utf-8')
 with AIOFILE as file:
     for line in file:
         if line.startswith('#'):
             continue  # skip comments
         line = line.strip()
+# Saves the cleaned text file's contents
 CLEANEDOUTPUT = open('aio_blocklist.txt', 'w', encoding='utf-8').writelines(UNIQUELINES)
