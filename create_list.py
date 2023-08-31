@@ -30,8 +30,11 @@ URLS = ["https://blocklistproject.github.io/Lists/adguard/crypto-ags.txt",
         "https://adguardteam.github.io/HostlistsRegistry/assets/filter_27.txt"
         ]
 
+# Downloads the individual lists
 for URL in URLS:
     LIST_INDEX = URLS.index(URL)
     FILENAME = "downloaded_lists/blocklist" + str(LIST_INDEX) + ".txt"
     urlretrieve(URL, FILENAME)
     print("Downloading: "+ FILENAME)
+
+# Merges lists into one file
