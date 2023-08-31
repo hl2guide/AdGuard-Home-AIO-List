@@ -64,9 +64,11 @@ UNIQUELINES = sorted(UNIQUELINES)
 CLEANEDOUTPUT = open('aio_blocklist.txt', 'w', encoding='utf-8').writelines(UNIQUELINES)
 
 # Removes all junk from aio_blocklist.txt file
+print("Removing junk lines from aio_blocklist.txt, please wait..")
 with open("aio_blocklist.txt", "r", encoding='utf-8') as f:
     LINES = f.readlines()
 with open("aio_blocklist.txt", "w", encoding='utf-8') as new_f:
     for line in LINES:
-        if not line.startswith("!"):
+        if not line.startswith("!") or line.startswith("#") or line.startswith("@@"):
             new_f.write(line)
+print("AIO list has been generated.")
