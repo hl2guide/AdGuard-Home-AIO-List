@@ -3,10 +3,12 @@
 # Downloads blocklists, combines them to one list,
 # sorts all lines, makes lines unique, and then removes comment lines
 
+# Version: 0.1.1
+
+from time import gmtime, strftime
 from urllib.request import urlretrieve
 import glob
 import os
-from time import gmtime, strftime
 
 NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
