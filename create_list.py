@@ -85,7 +85,7 @@ with open("aio_blocklist.txt", "r", encoding='utf-8') as f:
     LINES = f.readlines()
 with open("aio_blocklist_final.txt", "w", encoding='utf-8') as new_f:
     for line in LINES:
-        if not line.startswith("!") or line.startswith("#") or line.startswith("@@"):
+        if not line.startswith("!") or not line.startswith("#") or not line.startswith("@@"):
             new_f.write(line)
 os.remove("aio_blocklist.txt")
 
@@ -93,5 +93,5 @@ NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 print(NOW+" - "+"AIO list has been generated as: aio_blocklist_final.txt")
 
 # Write to HISTORY.md file
-with open("HISTORY.md", "a", encoding='utf-8') as myfile:
-    myfile.write("- Updated "+NOW+"\n")
+with open("HISTORY.md", "a", encoding='utf-8') as HISTORYFILE:
+    HISTORYFILE.write("- Updated "+NOW+"\n")
