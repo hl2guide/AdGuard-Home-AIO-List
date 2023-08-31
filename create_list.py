@@ -67,7 +67,7 @@ CLEANEDOUTPUT = open('aio_blocklist.txt', 'w', encoding='utf-8').writelines(UNIQ
 print("Removing junk lines from aio_blocklist.txt, please wait..")
 with open("aio_blocklist.txt", "r", encoding='utf-8') as f:
     LINES = f.readlines()
-with open("aio_blocklist.txt", "w", encoding='utf-8') as new_f:
+with open("aio_blocklist_final.txt", "w", encoding='utf-8') as new_f:
     for line in LINES:
         if not line.startswith("!") or line.startswith("#") or line.startswith("@@"):
             new_f.write(line)
