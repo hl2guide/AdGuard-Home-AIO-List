@@ -1,11 +1,12 @@
 """Creates a consolidated blocklist for many source files."""
 
 # Downloads blocklists, combines them to one list,
-# removes comment lines, sorts all lines and then makes lines unique
+# sorts all lines, makes lines unique, and then removes comment lines
 
 from urllib.request import urlretrieve
 import glob
 import os
+from time import gmtime, strftime
 
 URLS = ["https://blocklistproject.github.io/Lists/adguard/crypto-ags.txt",
         "https://blocklistproject.github.io/Lists/adguard/drugs-ags.txt",
@@ -15,21 +16,21 @@ URLS = ["https://blocklistproject.github.io/Lists/adguard/crypto-ags.txt",
         "https://blocklistproject.github.io/Lists/adguard/ransomware-ags.txt",
         "https://blocklistproject.github.io/Lists/adguard/scam-ags.txt",
         "https://blocklistproject.github.io/Lists/adguard/tracking-ags.txt",
-        "https://blocklistproject.github.io/Lists/adguard/abuse-ags.txt"
+        "https://blocklistproject.github.io/Lists/adguard/abuse-ags.txt",
         # Anudeep's Blacklist
-        #"https://hosts.anudeep.me/mirror/adservers.txt",
+        "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
         # LostAd
-        #"https://raw.githubusercontent.com/lennihein/LostAd/main/lostad_dns.txt",
+        "https://raw.githubusercontent.com/lennihein/LostAd/main/lostad_dns.txt",
         # ppfeufer / adguard-filter-list
-        #"https://raw.githubusercontent.com/ppfeufer/adguard-filter-list/master/blocklist",
+        "https://raw.githubusercontent.com/ppfeufer/adguard-filter-list/master/blocklist",
         # HaGeZi's Pro DNS Blocklist
-        #"https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt",
+        "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt",
         # HaGeZi's The World's Most Abused TLDs
-        #"https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt",
+        "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt",
         # Steven Black's List
-        #"https://adguardteam.github.io/HostlistsRegistry/assets/filter_33.txt",
+        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_33.txt",
         # OISD Blockist Big
-        #"https://adguardteam.github.io/HostlistsRegistry/assets/filter_27.txt"
+        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_27.txt"
         ]
 
 # Downloads the individual lists
@@ -71,4 +72,7 @@ with open("aio_blocklist_final.txt", "w", encoding='utf-8') as new_f:
     for line in LINES:
         if not line.startswith("!") or line.startswith("#") or line.startswith("@@"):
             new_f.write(line)
+os.remove("aio_blocklist.txt")
 print("AIO list has been generated.")
+
+NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
