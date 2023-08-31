@@ -23,18 +23,18 @@ URLS = ["https://blocklistproject.github.io/Lists/adguard/crypto-ags.txt",
         "https://blocklistproject.github.io/Lists/adguard/abuse-ags.txt",
         # Anudeep's Blacklist
         "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
-        # LostAd
-        "https://raw.githubusercontent.com/lennihein/LostAd/main/lostad_dns.txt",
-        # ppfeufer / adguard-filter-list
-        "https://raw.githubusercontent.com/ppfeufer/adguard-filter-list/master/blocklist",
-        # HaGeZi's Pro DNS Blocklist
-        "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt",
+        # LostAd [TOO BIG]
+        #"https://raw.githubusercontent.com/lennihein/LostAd/main/lostad_dns.txt",
+        # ppfeufer / adguard-filter-list [TOO BIG]
+        #"https://raw.githubusercontent.com/ppfeufer/adguard-filter-list/master/blocklist",
+        # HaGeZi's Pro DNS Blocklist [TOO BIG]
+        #"https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt",
         # HaGeZi's The World's Most Abused TLDs
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt",
-        # HaGeZi's Gambling DNS Blocklist
-        "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/gambling.txt",
-        # Steven Black's List
-        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_33.txt",
+        # HaGeZi's Gambling DNS Blocklist [TOO BIG]
+        #"https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/gambling.txt",
+        # Steven Black's List [INCLUDED ALREADY]
+        #"https://adguardteam.github.io/HostlistsRegistry/assets/filter_33.txt",
         # OISD Blockist Big
         "https://adguardteam.github.io/HostlistsRegistry/assets/filter_27.txt",
         # AdGuard Simplified Domain Names filter
