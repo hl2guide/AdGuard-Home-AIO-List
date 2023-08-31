@@ -12,7 +12,8 @@ import os
 
 NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
-URLS = ["https://blocklistproject.github.io/Lists/adguard/crypto-ags.txt",
+URLS = [
+        "https://blocklistproject.github.io/Lists/adguard/crypto-ags.txt",
         "https://blocklistproject.github.io/Lists/adguard/drugs-ags.txt",
         "https://blocklistproject.github.io/Lists/adguard/fraud-ags.txt",
         "https://blocklistproject.github.io/Lists/adguard/malware-ags.txt",
