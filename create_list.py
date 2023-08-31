@@ -85,7 +85,7 @@ with open("aio_blocklist.txt", "r", encoding='utf-8') as f:
     LINES = f.readlines()
 with open("aio_blocklist_final.txt", "w", encoding='utf-8') as new_f:
     for line in LINES:
-        if not line.startswith("!") or not line.startswith("#") or not line.startswith("@@"):
+        if not line.startswith("!") and not line.startswith("#") and not line.startswith("@@"):
             new_f.write(line)
 os.remove("aio_blocklist.txt")
 
