@@ -90,4 +90,8 @@ with open("aio_blocklist_final.txt", "w", encoding='utf-8') as new_f:
 os.remove("aio_blocklist.txt")
 
 NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
-print(NOW+" - "+"AIO list has been generated.")
+print(NOW+" - "+"AIO list has been generated as: aio_blocklist_final.txt")
+
+# Write to HISTORY.md file
+with open("HISTORY.md", "a", encoding='utf-8') as myfile:
+    myfile.write("- Updated "+NOW+"\n")
