@@ -66,7 +66,7 @@ CLEANEDOUTPUT = open('aio_blocklist.txt', 'w', encoding='utf-8').writelines(UNIQ
 AIOFILE = open('aio_blocklist.txt', encoding='utf-8')
 with AIOFILE as file:
     for line in file:
-        if line.startswith('#'):
+        if line.startswith('#') or line.startswith('!') or line.startswith('@@'):
             continue  # skip comments
         line = line.strip()
 # Saves the cleaned text file's contents
