@@ -57,17 +57,16 @@ while I < len(URLS):
 # Cleans aio_blocklist.txt file
 print("Cleaning aio_blocklist.txt, please wait..")
 # Open the file
-UNIQUELINES = set(open('aio_blocklist.txt', encoding='utf-8').readlines())
+UNIQUELINES = set(open('aio_blocklist.txt', 'r', encoding='utf-8').readlines())
 # Sort all lines in the set
 UNIQUELINES = sorted(UNIQUELINES)
 # Removes duplicates from from text file
 CLEANEDOUTPUT = open('aio_blocklist.txt', 'w', encoding='utf-8').writelines(UNIQUELINES)
-# Open the file for removing comments
-AIOFILE = open('aio_blocklist.txt', encoding='utf-8')
-with AIOFILE as file:
-    for line in file:
-        if line.startswith('#') or line.startswith('!') or line.startswith('@@'):
-            continue  # skip comments
-        line = line.strip()
-# Saves the cleaned text file's contents
-CLEANEDOUTPUT = open('aio_blocklist.txt', 'w', encoding='utf-8').writelines(UNIQUELINES)
+
+# Removes all junk from aio_blocklist.txt file
+with open("aio_blocklist.txt", "r", encoding='utf-8') as f:
+    LINES = f.readlines()
+with open("aio_blocklist.txt", "w", encoding='utf-8') as new_f:
+    for line in LINES:
+        if not line.startswith("!"):
+            new_f.write(line)
