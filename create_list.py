@@ -23,7 +23,7 @@ URLS = [
         "https://blocklistproject.github.io/Lists/adguard/tracking-ags.txt",
         "https://blocklistproject.github.io/Lists/adguard/abuse-ags.txt",
         # Anudeep's Blacklist
-        "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
+        #"https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
         # LostAd [TOO BIG]
         #"https://raw.githubusercontent.com/lennihein/LostAd/main/lostad_dns.txt",
         # ppfeufer / adguard-filter-list [TOO BIG]
@@ -37,7 +37,7 @@ URLS = [
         # Steven Black's List [INCLUDED ALREADY]
         #"https://adguardteam.github.io/HostlistsRegistry/assets/filter_33.txt",
         # OISD Blockist Big
-        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_27.txt",
+        #"https://adguardteam.github.io/HostlistsRegistry/assets/filter_27.txt",
         # AdGuard Simplified Domain Names filter
         "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
         ]
