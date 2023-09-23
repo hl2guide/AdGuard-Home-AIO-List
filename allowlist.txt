@@ -1,0 +1,9 @@
+# Injustice 2 PC Game Server
+@@||wb-agora-hydra-file-storage-pachinko.s3.amazonaws.com^$important
+
+# Torrent Trackers
+@@||tracker.lilithraws.cf^$important
+@@||public-tracker.cf^$important
+
+# Official Windows 10, 11 ISO Download Source
+@@||vlscppe.microsoft.com^$important
