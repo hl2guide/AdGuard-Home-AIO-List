@@ -23,7 +23,7 @@ URLS = [
         "https://blocklistproject.github.io/Lists/adguard/tracking-ags.txt",
         "https://blocklistproject.github.io/Lists/adguard/abuse-ags.txt",
         # Anudeep's Blacklist
-        #"https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
+        "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
         # LostAd [TOO BIG]
         #"https://raw.githubusercontent.com/lennihein/LostAd/main/lostad_dns.txt",
         # ppfeufer / adguard-filter-list [TOO BIG]
