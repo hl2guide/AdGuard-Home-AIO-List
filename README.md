@@ -15,6 +15,7 @@ Version: 0.5 (Beta 1)
 ## Included Blocklists
 
 - [Blocklist Project](https://github.com/blocklistproject/Lists)
+    - [Abuse](https://blocklistproject.github.io/Lists/adguard/abuse-ags.txt)
     - [Crypto](https://blocklistproject.github.io/Lists/adguard/crypto-ags.txt)
     - [Drugs](https://blocklistproject.github.io/Lists/adguard/drugs-ags.txt)
     - [Fraud](https://blocklistproject.github.io/Lists/adguard/fraud-ags.txt)
@@ -23,10 +24,9 @@ Version: 0.5 (Beta 1)
     - [Ransom](https://blocklistproject.github.io/Lists/adguard/ransomware-ags.txt)
     - [Scam](https://blocklistproject.github.io/Lists/adguard/scam-ags.txt)
     - [Tracking](https://blocklistproject.github.io/Lists/adguard/tracking-ags.txt)
-    - [Abuse](https://blocklistproject.github.io/Lists/adguard/abuse-ags.txt)
+- [AdGuard Simplified Domain Names filter](https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt) by AdGuard
 - [Anudeep's Blacklist](https://github.com/anudeepND/blacklist) - [RAW](https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt) by Anudeep
 - [HaGeZi's The World's Most Abused TLDs](https://github.com/hagezi/dns-blocklists) - [RAW](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt) by HaGeZi
-- [AdGuard Simplified Domain Names filter](https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt) by AdGuard
 
 ## The Lists (BETA)
 
