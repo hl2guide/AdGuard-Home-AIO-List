@@ -1,6 +1,8 @@
 # AdGuard-Home-AIO-Blocklist
 An All-In-One AdGuard Home blocklist.
 
+Version: 0.5 (Beta 1)
+
 ## Repo Status
 
 1. Currently being developed and tested using **GitHub Codespaces** and written in **Python**.
