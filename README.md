@@ -3,10 +3,12 @@ An All-In-One AdGuard Home blocklist.
 
 ## Repo Status
 
-1. Currently being developed and tested using GitHub Codespaces and written in Python.
-2. BETA version is now available, please report all issues here on GitHub
-3. Currently around 1 million rules are included (around 968,075)
-4. The blocklist will make AdGuard Home's RAM usage to increase to around 142MB
+1. Currently being developed and tested using **GitHub Codespaces** and written in **Python**.
+2. **BETA version** is now available, please report all issues here on GitHub
+3. Currently around **1 million rules** are included (around 968,075)
+4. The blocklist will make AdGuard Home's RAM usage to increase to around **142MB**
+5. Do not use these lists on older hardware with fewer than 4 CPU cores or IOT devices
+6. Be prepared to make your own whitelist additions within AdGuard Home, depending on your needs
 
 ## Included Blocklists
 
