@@ -25,7 +25,7 @@ Version: 0.5 (Beta 1)
     - [Tracking](https://blocklistproject.github.io/Lists/adguard/tracking-ags.txt)
     - [Abuse](https://blocklistproject.github.io/Lists/adguard/abuse-ags.txt)
 - [Anudeep's Blacklist](https://github.com/anudeepND/blacklist) - [RAW](https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt) by Anudeep
-- [HaGeZi's The World's Most Abused TLDs](https://github.com/hagezi/dns-blocklists) - [RAW](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt") by HaGeZi
+- [HaGeZi's The World's Most Abused TLDs](https://github.com/hagezi/dns-blocklists) - [RAW](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt) by HaGeZi
 - [AdGuard Simplified Domain Names filter](https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt) by AdGuard
 
 ## The Lists (BETA)
