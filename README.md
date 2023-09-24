@@ -1,4 +1,4 @@
-# AdGuard-Home-AIO-Blocklist
+# AdGuard-Home-AIO-List
 An All-In-One AdGuard Home blocklist.
 
 Version: 0.5 (Beta 1)
