@@ -1,5 +1,5 @@
 # AdGuard-Home-AIO-List
-An All-In-One AdGuard Home blocklist.
+An All-In-One AdGuard Home blocklist and allowlist.
 
 Version: 0.5 (Beta 1)
 
