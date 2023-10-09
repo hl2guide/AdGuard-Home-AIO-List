@@ -1,7 +1,7 @@
 # AdGuard-Home-AIO-List
 An All-In-One AdGuard Home blocklist and allowlist.
 
-Version: 0.5 (Beta 1)
+Version: 0.1.23 (Beta 2)
 
 ## Repo Status
 

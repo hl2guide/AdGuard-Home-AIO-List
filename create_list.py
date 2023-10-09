@@ -3,7 +3,9 @@
 # Downloads blocklists, combines them to one list,
 # sorts all lines, makes lines unique, and then removes comment lines
 
-# Version: 0.1.22
+# FOR ADGUARD HOME ONLY
+
+# Version: 0.1.23
 
 from time import gmtime, strftime
 from urllib.request import urlretrieve
