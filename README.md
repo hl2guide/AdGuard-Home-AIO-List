@@ -5,7 +5,7 @@ Version: 0.1.24 (Beta 3)
 
 # How to Add Blocklists to AdGuard Home
 
-1. Log into AdGuard Home
+1. Log into __AdGuard Home__
 2. Using the top menu click "Filters" and then "DNS blocklists"
 3. Click the green "Add blocklist" button
 4. Click the "Choose from the list"
