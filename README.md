@@ -5,6 +5,9 @@ Version: 0.1.24 (Beta 3)
 
 # How to Add Blocklists to AdGuard Home
 
+- If you have a PC with at least 8GB of RAM adding these lists will be very useful.
+- After adding and updating these lists RAM usage for AdGuard Home will go up to around 102MB.
+
 1. Log into __AdGuard Home__
 2. Using the top menu click "Filters" and then "DNS blocklists"
 3. Click the green "Add blocklist" button
