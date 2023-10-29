@@ -9,10 +9,10 @@ Version: 0.1.24 (Beta 3)
 - After adding and updating these lists RAM usage for AdGuard Home will go up to around 102MB
 
 1. Log into __AdGuard Home__
-2. Using the top menu click "Filters" and then "DNS blocklists"
-3. Click the green "Add blocklist" button
-4. Click the "Choose from the list"
-5. Checkmark the following "General" blocklists:
+2. Using the top menu click `Filters` and then `DNS blocklists`
+3. Click the green `Add blocklist` button
+4. Click the `Choose from the list`
+5. Checkmark the following `General` blocklists:
     - 1Hosts (List)
     - AdGuard DNS filter
     - AdAway Default Blocklist
@@ -20,11 +20,11 @@ Version: 0.1.24 (Beta 3)
     - OISD Blocklist Small
     - Peter Lowe's Blocklist
     - Steven Black's List
-7. Checkmark the following "Other" blocklists:
+7. Checkmark the following `Other` blocklists:
     - Dandelion Sprout's Anti Push Notifications
     - WindowsSpyBlocker
-9. Checkmark all of the "Security" blocklists
-10. Click the green "Save" button
+9. Checkmark all of the `Security` blocklists
+10. Click the green `Save` button
 
 # Archived Old Info
 
