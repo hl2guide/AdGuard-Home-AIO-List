@@ -11,7 +11,7 @@ Version: 0.1.24 (Beta 3)
 1. Log into __AdGuard Home__
 2. Using the top menu click `Filters` and then `DNS blocklists`
 3. Click the green `Add blocklist` button
-4. Click the `Choose from the list`
+4. Click the `Choose from the list` button
 5. Checkmark the following `General` blocklists:
     - 1Hosts (List)
     - AdGuard DNS filter
