@@ -26,6 +26,14 @@ Version: 0.1.24 (Beta 3)
 9. Checkmark all of the `Security` blocklists
 10. Click the green `Save` button
 
+# ⛔ How to Block Services
+
+1. Log into ___AdGuard Home__
+2. Using the top menu click `Filters` and then `Blocked services`
+3. Click on the `Block all` button
+4. Unblock (toggle off) services you actually use
+5. Click the green `Save` button once done
+
 # Archived Old Info
 
 ## Repo Status
