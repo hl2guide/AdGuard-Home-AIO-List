@@ -28,7 +28,7 @@ Version: 0.1.24 (Beta 3)
 
 # ⛔ How to Block Services
 
-1. Log into ___AdGuard Home__
+1. Log into __AdGuard Home__
 2. Using the top menu click `Filters` and then `Blocked services`
 3. Click on the `Block all` button
 4. Unblock (toggle off) services you actually use
