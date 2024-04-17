@@ -3,6 +3,7 @@
 An All-In-One AdGuard Home blocklist and allowlist.
 
 Version: 0.1.24 (Beta 4)
+
 Updated (AEST): 2024-04-17 03:23:56PM
 
 ## Repo Status
