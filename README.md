@@ -53,7 +53,7 @@ Updated (AEST): 2024-04-17 03:23:56PM
 - [WindowsSpyBlocker - Hosts spy rules](https://adguardteam.github.io/HostlistsRegistry/assets/filter_23.txt)
 - [uBlock₀ filters - Badware risks](https://adguardteam.github.io/HostlistsRegistry/assets/filter_50.txt)
 
-## Usage (BETA)
+## Setup (BETA)
 
 - The python script `create_list.py` can be used to generate `aio_blocklist_final.txt` on local machine that has Python
 - I have tested it on Windows 11, howevert it should work fine on other OSs too (as long as you have Python installed)
@@ -61,9 +61,12 @@ Updated (AEST): 2024-04-17 03:23:56PM
 1. Download a ZIP of this repo and extract it to a suitable known folder
 2. Create a new empty folder `downloaded_lists` within the `AdGuard-Home-AIO-List-main` folder
 3. Edit `create_list.py` in a text editor and change line 20 to set `CURRENTWORKINGDIRECTORY` to a path where `AdGuard-Home-AIO-List-main` exists (save change)
-4. Run the script `create_list.py` using Python
+4. Run the script `create_list.py` using `Python`
 5. Once the script finishes add the full path of `aio_blocklist_final.txt` to AdGuard Home's `DNS blocklists` as a `custom list`
-6. To regenerate the list simply run `create_list.py` when desired (as a scheduled task etc)
+
+## Usage
+
+To regenerate the list simply run `create_list.py` when desired (as a scheduled task etc)
 
 # Archived Old Info
 
