@@ -10,10 +10,10 @@ Updated (AEST): 2024-04-17 03:23:56PM
 
 - Written in **Python**
 - I attempted and tested using **GitHub Codespaces** and **github LFS** but moved away from both due to filesize restrictions
-- **BETA version** is now available, please report all issues here on GitHub
+- **BETA version 4** is now available for testing, please report all issues here on GitHub
 - Currently around **1.1 million unique rules** are included
 - The blocklist will make AdGuard Home's RAM usage increase to around **229MB**
-- Do not use these lists on older hardware with fewer than 4 CPU cores or IOT devices
+- Do not use these lists on older hardware with fewer than **4 CPU cores** or **IOT** devices
 - Be prepared to make your own whitelist additions within AdGuard Home, depending on your needs
 
 ## Included Blocklists
@@ -56,11 +56,12 @@ Updated (AEST): 2024-04-17 03:23:56PM
 ## Usage (BETA)
 
 - The python script `create_list.py` can be used to generate `aio_blocklist_final.txt` on local machine that has Python.
+
 1. Download a ZIP of this repo and extract it to a suitable known folder
 2. Create a new empty folder `downloaded_lists` within the `AdGuard-Home-AIO-List-main` folder
 3. Edit `create_list.py` in a text editor and change line 20 to set `CURRENTWORKINGDIRECTORY` to a path where `AdGuard-Home-AIO-List-main` exists (save change)
 4. Run the script `create_list.py` using Python
-5. Once the script finishes add the full path of `aio_blocklist_final.txt` to AdGuard Home's `DNS blocklists` as `custom list`
+5. Once the script finishes add the full path of `aio_blocklist_final.txt` to AdGuard Home's `DNS blocklists` as a `custom list`
 6. To regenerate the list simply run `create_list.py` when desired
 
 # Archived Old Info
