@@ -55,7 +55,7 @@ Updated (AEST): 2024-04-17 03:23:56PM
 
 ## Setup (BETA)
 
-- The python script `create_list.py` can be used to generate `aio_blocklist_final.txt` on local machine that has Python
+- The python script `create_list.py` can be used to generate `aio_blocklist_final.txt` on a local machine that has Python
 - I have tested it on Windows 11, however it should work fine on other OSs too (as long as you have Python installed)
 
 1. Download a ZIP of this repo and extract it to a suitable known folder
