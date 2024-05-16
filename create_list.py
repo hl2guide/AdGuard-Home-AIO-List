@@ -7,8 +7,8 @@
 
 # FOR ADGUARD HOME ONLY
 
-# Version: 0.1.24
-# Date: 16th of April, 2024
+# Version: 0.1.25
+# Date: 2024-05-16 02:41:49PM
 
 # Imports
 from time import gmtime, strftime
@@ -62,30 +62,37 @@ URLS = [
         "https://adguardteam.github.io/HostlistsRegistry/assets/filter_23.txt",
         # Dandelion Sprout's Anti-Malware List
         "https://adguardteam.github.io/HostlistsRegistry/assets/filter_12.txt",
-        # ph00lt0 / blocklist
+        # ph00lt0 / blocklist : https://github.com/ph00lt0/blocklist
         "https://raw.githubusercontent.com/ph00lt0/blocklists/master/blocklist.txt",
         # Deanoman - tracker_list_adguard_home
         "https://raw.githubusercontent.com/hl2guide/AdGuard-Home-AIO-List/main/tracker_list_adguard_home.txt",
-        # blocklistproject ads-ags.txt
+        # blocklistproject ads-ags.txt : https://github.com/blocklistproject/Lists
         "https://blocklistproject.github.io/Lists/adguard/ads-ags.txt",
-        # blocklistproject crypto-ags.txt
+        # blocklistproject crypto-ags.txt : https://github.com/blocklistproject/Lists
         "https://blocklistproject.github.io/Lists/adguard/crypto-ags.txt",
-        # blocklistproject drugs-ags.txt
+        # blocklistproject drugs-ags.txt : https://github.com/blocklistproject/Lists
         "https://blocklistproject.github.io/Lists/adguard/drugs-ags.txt",
-        # blocklistproject fraud-ags.txt
+        # blocklistproject fraud-ags.txt : https://github.com/blocklistproject/Lists
         "https://blocklistproject.github.io/Lists/adguard/fraud-ags.txt",
-        # blocklistproject phishing-ags.txt
+        # blocklistproject phishing-ags.txt : https://github.com/blocklistproject/Lists
         "https://blocklistproject.github.io/Lists/adguard/phishing-ags.txt",
-        # blocklistproject ransomware-ags.txt
+        # blocklistproject ransomware-ags.txt : https://github.com/blocklistproject/Lists
         "https://blocklistproject.github.io/Lists/adguard/ransomware-ags.txt",
-        # blocklistproject scam-ags.txt
+        # blocklistproject scam-ags.txt : https://github.com/blocklistproject/Lists
         "https://blocklistproject.github.io/Lists/adguard/scam-ags.txt",
-        # blocklistproject tracking-ags.txt
+        # blocklistproject tracking-ags.txt : https://github.com/blocklistproject/Lists
         "https://blocklistproject.github.io/Lists/adguard/tracking-ags.txt",
-        # Multi PRO - Extended protection
+        # Multi PRO - Extended protection : https://github.com/hagezi/dns-blocklists
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt",
-        # Anudeep's Blacklist
+        # Anudeep's Blacklist : https://github.com/anudeepND/blacklist
         "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
+        # romainmarcoux / malicious-ip : https://github.com/romainmarcoux/malicious-ip
+        "https://raw.githubusercontent.com/romainmarcoux/malicious-ip/main/full-40k.txt",
+        # borestad / blocklist-abuseipdb : https://github.com/borestad/blocklist-abuseipdb
+        "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-60d.ipv4",
+        # ipsum : https://github.com/stamparm/ipsum
+        "https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt",
+        #"https://hosts.anudeep.me/mirror/adservers.txt"
         # LostAd [TOO BIG]
         #"https://raw.githubusercontent.com/lennihein/LostAd/main/lostad_dns.txt",
         # ppfeufer / adguard-filter-list [TOO BIG]

@@ -1,20 +1,19 @@
 # AdGuard-Home-AIO-List
 
-An All-In-One AdGuard Home blocklist and allowlist.
+An All-In-One AdGuard Home blocklist and allowlist generated locally on your PC using Python.
 
-Version: 0.1.24 (Beta 4)
+Version: 0.1.25
 
-Updated (AEST): 2024-04-17 03:23:56PM
+Updated (AEST): 2024-05-16 02:41:49PM
 
 ## Repo Status
 
 - Written in **Python** it now has been updated for 2024 and have new lists added
-- I attempted and tested using **GitHub Codespaces** and **github LFS** but moved away from both due to filesize restrictions
-- **BETA version 4** is now available for testing, please report all issues here on GitHub
-- Currently around **1.1 million unique rules** are included
-- The blocklist will make AdGuard Home's RAM usage increase to around **229MB**
+- Currently around **1.2 million unique rules** are included
+- The blocklist will make AdGuard Home's RAM usage increase to around **330MB**
 - Do not use these lists on older hardware with fewer than **4 CPU cores** or **IOT** devices
 - Be prepared to make your own whitelist additions within AdGuard Home, depending on your needs
+- I attempted and tested using **GitHub Codespaces** and **github LFS** but moved away from both due to filesize restrictions
 
 ## Included Blocklists
 
@@ -37,23 +36,26 @@ Updated (AEST): 2024-04-17 03:23:56PM
 - [Dandelion Sprout's Anti Push Notifications](https://adguardteam.github.io/HostlistsRegistry/assets/filter_39.txt)
 - [Dandelion Sprout's Anti-Malware List](https://adguardteam.github.io/HostlistsRegistry/assets/filter_12.txt)
 - [Deanoman - tracker_list_adguard_home](https://raw.githubusercontent.com/hl2guide/AdGuard-Home-AIO-List/main/tracker_list_adguard_home.txt)
+- [DurableNapkin's Scam Blocklist](https://adguardteam.github.io/HostlistsRegistry/assets/filter_10.txt)
+- [HaGeZi's Multi PRO - Extended protection](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt)
 - [HaGeZi's The World's Most Abused TLDs](https://github.com/hagezi/dns-blocklists) - [RAW](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt) by HaGeZi
 - [Malicious URL Blocklist (URLHaus)](https://adguardteam.github.io/HostlistsRegistry/assets/filter_11.txt)
-- [Multi PRO - Extended protection](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt)
 - [OISD Blocklist Small](https://adguardteam.github.io/HostlistsRegistry/assets/filter_5.txt)
 - [Peter Lowe's Blocklist](https://adguardteam.github.io/HostlistsRegistry/assets/filter_3.txt)
 - [Phishing Army](https://adguardteam.github.io/HostlistsRegistry/assets/filter_18.txt)
 - [Phishing URL Blocklist (PhishTank and OpenPhish)](https://adguardteam.github.io/HostlistsRegistry/assets/filter_30.txt)
-- [ph00lt0 / blocklist](https://raw.githubusercontent.com/ph00lt0/blocklists/master/blocklist.txt)
-- [Scam Blocklist by DurableNapkin](https://adguardteam.github.io/HostlistsRegistry/assets/filter_10.txt)
 - [ShadowWhisperer's Malware List](https://adguardteam.github.io/HostlistsRegistry/assets/filter_42.txt)
 - [Stalkerware Indicators List](https://adguardteam.github.io/HostlistsRegistry/assets/filter_31.txt)
 - [Steven Black's List](https://adguardteam.github.io/HostlistsRegistry/assets/filter_33.txt)
 - [The Big List of Hacked Malware Web Sites](https://adguardteam.github.io/HostlistsRegistry/assets/filter_9.txt)
 - [WindowsSpyBlocker - Hosts spy rules](https://adguardteam.github.io/HostlistsRegistry/assets/filter_23.txt)
+- [borestad's blocklist-abuseipdb](https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-60d.ipv4)
+- [ph00lt0's blocklist](https://raw.githubusercontent.com/ph00lt0/blocklists/master/blocklist.txt)
+- [romainmarcoux's malicious-ip](https://raw.githubusercontent.com/romainmarcoux/malicious-ip/main/full-40k.txt)
+- [stamparm's ipsum](https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt)
 - [uBlock₀ filters - Badware risks](https://adguardteam.github.io/HostlistsRegistry/assets/filter_50.txt)
 
-## Setup (BETA)
+## Setup
 
 - The python script `create_list.py` can be used to generate `aio_blocklist_final.txt` on a local machine that has Python
 - I have tested it on Windows 11, however it should work fine on other OSs too (as long as you have Python installed)
