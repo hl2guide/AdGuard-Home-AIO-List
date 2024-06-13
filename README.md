@@ -2,22 +2,28 @@
 
 An All-In-One AdGuard Home blocklist and allowlist generated locally on your PC using Python.
 
-Version: 0.1.25
+Version: 0.2
 
-Updated (AEST): 2024-05-16 02:41:49PM
+Updated (AEST): 2024-06-14 01:32:25AM
 
-## Repo Status
+## ✨ What's New in 0.2
+- Added new must-have requirement of a Python package named [__requests__](https://pypi.org/project/requests/)
+- Added new lists
+- More cleanup of output rules
+
+## 🔬 Repo Status
 
 - Written in **Python** it now has been updated for 2024 and have new lists added
-- Currently around **1.2 million unique rules** are included
-- The blocklist will make AdGuard Home's RAM usage increase to around **330MB**
+- Currently around **5.2 million unique rules** are included
+- The blocklist will make AdGuard Home's RAM usage increase to around **775MB**
 - Do not use these lists on older hardware with fewer than **4 CPU cores** or **IOT** devices
 - Be prepared to make your own whitelist additions within AdGuard Home, depending on your needs
 - I attempted and tested using **GitHub Codespaces** and **github LFS** but moved away from both due to filesize restrictions
 
-## Included Blocklists
+## ⛔ Included Blocklists
 
 - [1Hosts (Lite)](https://adguardteam.github.io/HostlistsRegistry/assets/filter_24.txt)
+- [AdAway Default Blocklist](https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt)
 - [AdGuard DNS filter](https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt)
 - [AdGuard Simplified Domain Names filter](https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt) by AdGuard
 - [Anudeep's Blacklist](https://github.com/anudeepND/blacklist) - [RAW](https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt) by Anudeep
@@ -31,7 +37,7 @@ Updated (AEST): 2024-05-16 02:41:49PM
     - [Ransom](https://blocklistproject.github.io/Lists/adguard/ransomware-ags.txt)
     - [Scam](https://blocklistproject.github.io/Lists/adguard/scam-ags.txt)
     - [Tracking](https://blocklistproject.github.io/Lists/adguard/tracking-ags.txt)
-- [AdAway Default Blocklist](https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt)
+- [Blocklists by sefinek](https://sefinek.net/blocklist-generator/adguard) - ✨ 0.2
 - [Dan Pollock's List](https://adguardteam.github.io/HostlistsRegistry/assets/filter_4.txt)
 - [Dandelion Sprout's Anti Push Notifications](https://adguardteam.github.io/HostlistsRegistry/assets/filter_39.txt)
 - [Dandelion Sprout's Anti-Malware List](https://adguardteam.github.io/HostlistsRegistry/assets/filter_12.txt)
@@ -55,7 +61,14 @@ Updated (AEST): 2024-05-16 02:41:49PM
 - [stamparm's ipsum](https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt)
 - [uBlock₀ filters - Badware risks](https://adguardteam.github.io/HostlistsRegistry/assets/filter_50.txt)
 
-## Setup
+## ⚒️ Setup
+
+1. Install [Python](https://www.python.org) on your device
+2. Install a required Python package "requests" by running:
+
+```
+python -m pip install requests
+```
 
 - The python script `create_list.py` can be used to generate `aio_blocklist_final.txt` on a local machine that has Python
 - I have tested it on Windows 11, however it should work fine on other OSs too (as long as you have Python installed)
@@ -70,7 +83,7 @@ Updated (AEST): 2024-05-16 02:41:49PM
 
 To regenerate the list simply run `create_list.py` when desired (as a scheduled task etc)
 
-# Archived Old Info
+# 📦 Archived Old Info
 
 The below is old info that shouldn't be needed anymore.
 
