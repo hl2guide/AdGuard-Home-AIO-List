@@ -7,26 +7,32 @@
 
 # FOR ADGUARD HOME ONLY
 
-# Required Packages
-# A python package called "requests" is required to handle 403 errors (install that package first by running: python -m pip install requests)
+# Tested and working on Python for Windows Python 3.12.4 or later.
 
-# Version: 0.2
-# Date: 2024-06-14 01:20:58AM
+# Required Python Packages:
+# - "requests" is required to handle 403 errors (install that package first by running: python -m pip install requests)
+# - "rich" is required for colored text output
+
+# Version: 0.3
+# Date: 2024-07-15 05:33:16PM
 
 # Imports
 from time import gmtime, strftime
+from datetime import datetime, timezone
 from urllib.request import urlretrieve
 import requests
+from rich import print
+import glob
+import os
+# from tqdm import tqdm
 #from urllib.request import Request, urlopen
 #import requests
 #from random import seed
-import glob
-import os
 
 #CURRENTWORKINGDIRECTORY = os.getcwd() + "\\"
 CURRENTWORKINGDIRECTORY = "C:\\Users\\Dean\\Documents\\Important\\MEGASync\\GitHub\\CodeLibrary\\Python\\AdGuard-Home-AIO-List-main\\"
 
-NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+# NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
 URLS = [
         # AdGuard Simplified Domain Names filter
@@ -218,6 +224,11 @@ URLS = [
         "https://blocklist.sefinek.net/generated/v1/adguard/tracking-and-telemetry/quidsup/trackers-hosts.fork.txt",
         "https://blocklist.sefinek.net/generated/v1/adguard/useless-websites/jarelllama/parked-domains.fork.txt",
         "https://blocklist.sefinek.net/generated/v1/adguard/useless-websites/sefinek.hosts.txt",
+        "https://blocklist.sefinek.net/generated/v1/adguard/dating-services/ShadowWhisperer/dating.fork.txt", # Testing 0.3
+        "https://blocklist.sefinek.net/generated/v1/adguard/dating-services/sefinek.hosts.txt", # Testing 0.3
+        "https://blocklist.sefinek.net/generated/v1/adguard/malicious/ShadowWhisperer/malware.fork.txt", # Testing 0.3
+        "https://blocklist.sefinek.net/generated/v1/adguard/scam/ShadowWhisperer/scam.fork.txt", # Testing 0.3
+        "https://blocklist.sefinek.net/generated/v1/adguard/tracking-and-telemetry/ShadowWhisperer/tracking.fork.txt", # Testing 0.3
 
         #"https://hosts.anudeep.me/mirror/adservers.txt"
         # LostAd [TOO BIG]
@@ -238,19 +249,34 @@ URLS = [
         #"https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
         ]
 
-NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+UTC_DT = datetime.now(timezone.utc) # UTC time
+NOW = str(UTC_DT.astimezone()) # local time
+
+def refreshDateTimeToNow():
+    UTC_DT = datetime.now(timezone.utc) # UTC time
+    NOW = str(UTC_DT.astimezone()) # local time
+    return NOW
+
+NOW = refreshDateTimeToNow()
+
+#pbarCollection = tqdm(URLS)
 
 # Downloads the individual lists
 for URL in URLS:
     LIST_INDEX = URLS.index(URL)
     FILENAME = CURRENTWORKINGDIRECTORY + "downloaded_lists\\blocklist" + str(LIST_INDEX) + ".txt"
-#    print(NOW+" - "+"Downloading: " + URL + "  >>  " + FILENAME)
+    #print(NOW+" - "+"Downloading: " + URL + "  >>  " + FILENAME)
 #    urlretrieve(URL, FILENAME)
 #    NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
+    #pbarCollection.set_description("Downloading List " + str(LIST_INDEX))
+    #print("\n")
+
     # Uses a workaround for 403 errors by applying a better "User-Agent" header to the request
     if URL.startswith("https://blocklist.sefinek.net/"):
-        print(NOW+" - "+"Downloading: " + URL + "  >>  " + FILENAME)
+        print(NOW+" - "+"Downloading: " + URL)
+        print("to: " + FILENAME)
+        # print("\n")
         HEADERS = {
             'User-Agent': 'Mozilla 5.0',
         }
@@ -259,11 +285,14 @@ for URL in URLS:
         if RESPONSE.status_code == 200:
             with open(FILENAME, "w", encoding='utf8') as file:
                 file.write(CONTENT)
-        NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+        NOW = refreshDateTimeToNow()
     else:
-        print(NOW+" - "+"Downloading: " + URL + "  >>  " + FILENAME)
+        print(NOW+" - "+"Downloading: " + URL)
+        print("to: " + FILENAME)
+        #print("\n")
         urlretrieve(URL, FILENAME)
-        NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+        NOW = refreshDateTimeToNow()
+    # os.system('cls')
 
 # Merges lists into one file
 # Source: https://bobbyhadz.com/blog/merge-text-files-in-python#how-to-merge-text-files-in-python
@@ -273,7 +302,7 @@ with open(CURRENTWORKINGDIRECTORY + 'aio_blocklist.txt', 'w', encoding='utf-8') 
         with open(file_path, 'r', encoding='utf-8') as input_file:
             output_file.write(input_file.read() + '\n')
 
-NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+NOW = refreshDateTimeToNow()
 
 # Removes individual text files
 I = 0
@@ -282,7 +311,7 @@ while I < len(URLS):
     os.remove(CURRENTWORKINGDIRECTORY + "downloaded_lists/blocklist"+str(I)+".txt")
     I = I + 1
 
-NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+NOW = refreshDateTimeToNow()
 
 # Cleans aio_blocklist.txt file
 print(NOW+" - "+"Cleaning aio_blocklist.txt, please wait..")
@@ -293,7 +322,7 @@ UNIQUELINES = sorted(UNIQUELINES)
 # Removes duplicates from from text file
 CLEANEDOUTPUT = open(CURRENTWORKINGDIRECTORY + 'aio_blocklist.txt', 'w', encoding='utf-8').writelines(UNIQUELINES)
 
-NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+NOW = refreshDateTimeToNow()
 
 # Removes all junk from aio_blocklist.txt file
 print(NOW+" - "+"Removing junk lines from aio_blocklist.txt, please wait..")
@@ -318,11 +347,12 @@ with open(CURRENTWORKINGDIRECTORY + "aio_blocklist_final.txt", "w", encoding='ut
                 line = line.replace('^','^$important')
                 line = line.replace('||||','||')
                 line = line.replace('|||','||')
+                line = line.replace('||','|') # Implemented a fix to skip subdomain blocking
                 line = line.replace('$important$important','$important')
                 new_f.write(line)
 os.remove(CURRENTWORKINGDIRECTORY + "aio_blocklist.txt")
 
-NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+NOW = refreshDateTimeToNow()
 
 # Cleans aio_blocklist_final.txt file
 print(NOW+" - "+"Cleaning aio_blocklist_final.txt, please wait..")
@@ -335,12 +365,21 @@ UNIQUELINES = sorted(UNIQUELINES)
 # Removes duplicates from from text file
 CLEANEDOUTPUT = open(CURRENTWORKINGDIRECTORY + 'aio_blocklist_final.txt', 'w', encoding='utf-8').writelines(UNIQUELINES)
 
-NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+NOW = refreshDateTimeToNow()
 print(NOW+" - "+"AIO list has been generated as: aio_blocklist_final.txt")
 
 # Writes to HISTORY.md file
 with open(CURRENTWORKINGDIRECTORY + "HISTORY.md", "a", encoding='utf-8') as HISTORYFILE:
     HISTORYFILE.write("- Updated "+NOW+"\n")
 
-NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+NOW = refreshDateTimeToNow()
+# NOW = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 print(NOW+" - "+"Updated: HISTORY.md")
+
+# Version 0.3 changes:
+# - added fix to skip blocking subdomains
+# - added color text output using "rich" package
+# - added more lists
+# - fixed datetime now to be local time
+# - improved output
+#

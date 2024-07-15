@@ -2,9 +2,16 @@
 
 An All-In-One AdGuard Home blocklist and allowlist generated locally on your PC using Python.
 
-Version: 0.2
+Version: 0.3
 
-Updated (AEST): 2024-06-14 01:32:25AM
+Updated (AEST): 2024-07-15 05:38:23PM
+
+## ✨ What's New in 0.3
+ - added fix to skip blocking subdomains
+ - added color text output using "rich" package
+ - added more lists
+ - fixed datetime now to be local time
+ - improved output
 
 ## ✨ What's New in 0.2
 - Added new must-have requirement of a Python package named [__requests__](https://pypi.org/project/requests/)
@@ -18,7 +25,7 @@ Updated (AEST): 2024-06-14 01:32:25AM
 - The blocklist will make AdGuard Home's RAM usage increase to around **775MB**
 - Do not use these lists on older hardware with fewer than **4 CPU cores** or **IOT** devices
 - Be prepared to make your own whitelist additions within AdGuard Home, depending on your needs
-- I attempted and tested using **GitHub Codespaces** and **github LFS** but moved away from both due to filesize restrictions
+- I attempted and tested using **GitHub Codespaces** and **github LFS** but moved away from both due to annoying filesize restrictions
 
 ## ⛔ Included Blocklists
 
@@ -64,10 +71,11 @@ Updated (AEST): 2024-06-14 01:32:25AM
 ## ⚒️ Setup
 
 1. Install [Python](https://www.python.org) on your device
-2. Install a required Python package "requests" by running:
+2. Install two required Python packages by running:
 
 ```
 python -m pip install requests
+python -m pip install rich
 ```
 
 - The python script `create_list.py` can be used to generate `aio_blocklist_final.txt` on a local machine that has Python
