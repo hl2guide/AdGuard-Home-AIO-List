@@ -21,6 +21,7 @@ Updated (AEST): 2024-07-15 05:38:23PM
 ## 🔬 Repo Status
 
 - Written in **Python** it now has been updated for 2024 and have new lists added
+- Tested and working on Python for Windows Python 3.12.4 or later
 - Currently around **5.2 million unique rules** are included
 - The blocklist will make AdGuard Home's RAM usage increase to around **775MB**
 - Do not use these lists on older hardware with fewer than **4 CPU cores** or **IOT** devices
