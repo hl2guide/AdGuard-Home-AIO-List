@@ -8,7 +8,7 @@ Updated (AEST): 2024-07-15 05:38:23PM
 
 ## ✨ What's New in 0.3
  - added fix to skip blocking subdomains
- - added color text output using the ["rich" package](https://pypi.org/project/rich/)
+ - added color text output using the Python package named [__"rich"__](https://pypi.org/project/rich/)
  - added more lists
  - fixed datetime now to be local time
  - improved output
